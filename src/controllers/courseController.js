@@ -43,15 +43,15 @@ module.exports = {
         return res.send(`Curso deletado!`);
     },
     async update(req,res){
-        const employee_id = req.headers.authorization;
+        // const employee_id = req.headers.authorization;
         const {course_id} = req.params;
         const {name,description} = req.body;
 
-        const employee = await Employee.findByPk(employee_id);
+        // const employee = await Employee.findByPk(employee_id);
 
-        if(!employee){
-            res.status(400).json({error:'Employee not foud'});
-        }
+        // if(!employee){
+        //     res.status(400).json({error:'Employee not foud'});
+        // }
 
         await Course.update({name,description},{
             where:{
