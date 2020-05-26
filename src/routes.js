@@ -14,6 +14,7 @@ routes.get('/cursos',CourseController.index),
 routes.post('/cursos', CourseController.store),
 routes.delete('/cursos/:course_id', CourseController.delete),
 routes.put('/cursos/:course_id', CourseController.update),
+routes.get('/cursos/:course_id', CourseController.showOne),
 
 //Professor
 routes.get('/professores',TeacherController.index),

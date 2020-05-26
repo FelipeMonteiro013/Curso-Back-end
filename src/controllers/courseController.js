@@ -59,5 +59,12 @@ module.exports = {
             } 
         })
         return res.send('Curso Atualizado!');
+    }, 
+    async showOne(req,res){
+        const {course_id} = req.params;
+        const course = await Course.findByPk(course_id);
+
+        return res.json(course);
+        
     }
 }
